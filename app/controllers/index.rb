@@ -1,6 +1,6 @@
 get '/' do
   # Look in app/views/index.erb
-  erb :index
+  erb :'surveys/create_survey'
 end
 
 get '/bands' do
