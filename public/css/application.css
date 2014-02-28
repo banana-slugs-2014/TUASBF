@@ -1,10 +1,97 @@
 .container {
   margin: 20px auto;
-  width: 600px;
+  width: 700px;
   padding: 0px 20px 20px 20px;
+  height: 500px;
   border: 1px dotted black;
 }
 
 th {
   text-align: left;
 }
+
+/*===== login page =====*/
+.logo {
+  margin: 25px;
+  border: 1px solid black;
+  line-height: 250px;
+}
+
+.login {
+  float: left;
+  display: inline-block;
+  /*border: 1px solid black;*/
+}
+
+.signup {
+  margin-left: 110px;
+  display: inline-block;
+  /*border: 1px solid black;*/
+}
+
+#btn_login {
+  margin-left: 100px;
+}
+
+#btn_signup {
+  margin-left: 100px;
+}
+
+.login_signup {
+  text-align: center;
+}
+
+.notification {
+  text-align: center;
+}
+
+.notification_message {
+  color: red;
+}
+
+/*===== user page =====*/
+h1{
+  text-align: center;
+}
+
+#user_page{
+  margin-right: auto;
+  margin-left: auto;
+  width: 600px;
+  border: 1px solid black;
+}
+
+#available_surveys {
+  float: left;
+}
+
+#my_surveys {
+  float: right;
+}
+
+/*===== take survey =====*/
+.survey_content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+  border: 1px solid black;
+  text-align: center;
+  padding: 25px;
+}
+
+/*===== create survey =====*/
+
+.survey_create {
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+  border: 1px solid black;
+  text-align: center;
+  padding: 25px;
+}
+
+.survey_create table {
+  margin-right: auto;
+  margin-left: auto;
+}
+

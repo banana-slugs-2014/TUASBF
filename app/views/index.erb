@@ -1,23 +1,47 @@
 <div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <p>Hello, <%= em("world!") %></p>
+  <div class="logo">
+    Logo here
+  </div>
 
-  <table>
-    <tr>
-      <th>File Description</th>
-      <th>File Location</th>
-    </tr>
-    <tr>
-      <td>This view file</td>
-      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The layout file</td>
-      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The current controller</td>
-      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-  </table>
+<div class="login">
+  <form action='/users/login' method='get'>
+    <p class="login_signup">Already a member?</p>
+    <table>
+      <tr>
+        <td>email: </td>
+        <td><input type='text' name='user[email]'></td>
+      </tr>
+      <tr>
+        <td>password: </td>
+        <td><input type='text' name='user[password]'>
+      </tr>
+      <tr>
+        <td colspan='2'><button id='btn_login' type='submit'>Login</button>
+      </tr>
+    </table>
+  </form>
+  <br>
 </div>
+
+<div class="signup">
+  <form action='/users/signup' method='get'>
+    <p class="login_signup">Want to be super BF</p>
+    <table>
+      <tr>
+        <td>email: </td>
+        <td><input type='text' name='user[email]'></td>
+      </tr>
+      <tr>
+        <td>password: </td>
+        <td><input type='text' name='user[password]'>
+      </tr>
+      <tr>
+        <td colspan='2'><button id='btn_signup' type='submit'>Signup</button>
+      </tr>
+    </table>
+  </form>
+  <br>
+
+</div>
+  <div class="notification"><%= erb :notification_message %></div>
+
