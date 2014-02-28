@@ -1,4 +1,5 @@
 get '/users/new' do
+  # Unused
   erb :'users/new'
 end
 
@@ -17,6 +18,7 @@ post '/users/' do
 end
 
 get '/users/:id/edit' do
+  # Unused for the moment
   @user = User.find(params[:id])
   erb :'users/edit'
 end
@@ -27,7 +29,7 @@ patch '/users/:id' do
   if @user.invalid?
     alert = "This entry is invalid for this user"
   end
-  redirect "/users/edit#{"?alert="+alert if alert}"
+  redirect "/users/#{params[:id]}/edit#{"?alert="+alert if alert}"
 end
 
 get '/users/:id/delete' do
@@ -45,5 +47,5 @@ end
 
 get '/users/:id' do
   @user = User.find(params[:id])
-  erb :'users/show'
+  erb :'users/profile'
 end
