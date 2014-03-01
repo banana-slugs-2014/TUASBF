@@ -2,22 +2,14 @@
 
 <form class="survey_create">
 
-  <p>
-    <span id='addQuestion'>Add Question</span>
-  </p>
-
-  <p>
-<label for="var2">Variable 2: </label>
-<input type="text" name="var2" id="var2"><span class="removeVar">Remove Variable</span>
-</p>
-<!--   <table>
+  <table>
     <tr>
       <td>Question</td>
       <td></td>
     </tr>
     <tr>
       <td>option 1</td>
-      <td><input type="text" name="option1"></td>
+      <td><input type="text" name="survey[question1_answer1]"></td>
     </tr>
     <tr>
       <td>option 2</td>
@@ -27,7 +19,7 @@
       <td>option 3</td>
       <td><input type="text" name="option3"></td>
     </tr>
-  </table> -->
+  </table>
   <br>
   <button type="submit" formmethod="post" formaction="/survey">Create Survey</button>
   <button type="submit" formmethod="get" formaction="/">Home</button>
