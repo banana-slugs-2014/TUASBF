@@ -1,26 +1,30 @@
 <div>
-  <h1>USER - you are an Ultimate Amazing Super Best Friend!</h1>
+  <h1>You are an Ultimate Amazing Super Best Friend!</h1>
 </div>
+
+
 
 <div id="user_page">
   <div id="available_surveys">
      Take a Survey and Make Some Super Best Friends!<br>
-    <% ALL_USER_SURVEYS.each do |survey| %>
-      <li><a href="/surveys/<%= survey.id %>"><%= survery.title %></a></li>
-    <% end %>
+    <%# .each do |survey| %>
+      <li><a href="/surveys/<%#= survey.id %>"><%#= survery.title %></a></li>
+    <%# end %>
   </div>
-
   <div id="my_surveys">
-    <% if A_USERS_SURVEY %>
+    <%# if A_USERS_SURVEY %>
     My Ultimate Amazing Survey(s)<br>
       <ul>
-     <% USER_SURVEY.each do |survey| %>
-       <li><a href="/surveys/<%= survey.id %>/info"><%= survery.title %></a></li>
-     <% end %>
+     <%# @user.surveys.each do |survey| %>
+       <li><a href="/surveys/<%#= survey.id %>/info"><%#= survery.title %></a></li>
+     <%# end %>
     </ul>
   </div>
   <br style="clear:both;",>
 </div>
-
+  <a href="/users/<%#= current_user.id %>edit">Edit User</a>
 <a href="/">Home</a>
 
+<!-- edit user
+
+delete user -->
