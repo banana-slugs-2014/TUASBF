@@ -1,0 +1,13 @@
+<% @survey.questions.each do |question| %>
+  <div class = 'survey-content'>
+    <h4><%= question.text %><br></h4>
+      <% question.answers.each do |answer| %>
+        <p><%= answer.text %></p>
+      <% end %>
+      <% if @survey.user_id == session[:user_id] %>
+        <%= count_survey_answers(qestion) %>
+      <% end %>
+  </div>
+<% end %>
+
+
