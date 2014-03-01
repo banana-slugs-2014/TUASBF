@@ -3,7 +3,7 @@ class CreateSurveys < ActiveRecord::Migration
 
     create_table(:users) do |t|
       t.string :email
-      t.string :password_hash
+      t.string :password
     end
 
     create_table(:surveys) do |t|
