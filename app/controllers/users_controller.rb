@@ -3,7 +3,7 @@ get '/users/new' do
   erb :'users/new'
 end
 
-post '/users/' do
+post '/users/new' do
   # TODO: Refactor for alerts
   @user = User.create(params[:user])
   if @user.nil?
@@ -15,6 +15,21 @@ post '/users/' do
   else
     redirect "/users/#{@user.id}"
   end
+end
+
+post '/users/login' do
+  user_params = params[:user]
+  @user = User.find_by_email(user_params["email"])
+
+  if @user.nil?
+    alert = "There is no such user"
+  elsif @user.password == user_params["password"]
+    session[:user_id] = @user.id
+  else
+    alert = "The password is not right"
+  end
+
+  redirect "/#{'?alert=' + alert if alert }"
 end
 
 get '/users/:id/edit' do
