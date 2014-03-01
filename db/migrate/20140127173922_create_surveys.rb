@@ -8,27 +8,27 @@ class CreateSurveys < ActiveRecord::Migration
 
     create_table(:surveys) do |t|
       t.string :title
-      t.integer :user_id
+      t.references :user
     end
 
     create_table(:questions) do |t|
       t.string :text
-      t.integer :survey_id
+      t.references :survey
     end
 
     create_table(:answers) do |t|
       t.string :text
-      t.integer :question_id
+      t.references :question
     end
 
     create_table(:responses) do |t|
-      t.integer :answer_id
-      t.integer :user_id
+      t.references :answer
+      t.references :user
     end
 
     create_table(:completesurveys) do |t|
-      t.integer :user_id
-      t.integer :survey_id
+      t.references :user
+      t.references :survey
     end
 
   end
