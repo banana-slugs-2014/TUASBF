@@ -4,5 +4,10 @@
       <% question.answers.each do |answer| %>
         <p><%= answer.text %></p>
       <% end %>
+      <% if @survey.user_id == session[:user_id] %>
+        <%= count_survey_answers(qestion) %>
+      <% end %>
   </div>
 <% end %>
+
+
