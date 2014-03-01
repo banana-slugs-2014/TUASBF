@@ -13,15 +13,18 @@
     </tr>
     <tr>
       <td>option 2</td>
-      <td><input type="text" name="option2"></td>
+      <td><input type="text" name="survey[question1_answer2]"></td>
     </tr>
     <tr>
       <td>option 3</td>
-      <td><input type="text" name="option3"></td>
+      <td><input type="text" name="survey[question1_answer3]"></td>
     </tr>
   </table>
   <br>
-  <button type="submit" formmethod="post" formaction="/survey">Create Survey</button>
+  <button class="add_question" type="submit" formmethod="post">Add question</button>
+  <button type="submit" formmethod="post" formaction="/surveys/new">Create Survey</button>
   <button type="submit" formmethod="get" formaction="/">Home</button>
 
 </form>
+
+

@@ -43,11 +43,10 @@ th {
 
 .notification {
   text-align: center;
+  color: red;
+  font-weight: bold;
 }
 
-.notification_message {
-  color: red;
-}
 
 /*===== user page =====*/
 h1{
@@ -94,4 +93,46 @@ h1{
   margin-right: auto;
   margin-left: auto;
 }
+
+/*===== User Profile =====*/
+
+#user_page {
+  list-style: none;
+  width: 850px;
+}
+
+.survey_list {
+  margin: 10px;
+  width: 45%;
+  border: 1px solid silver;
+  height: 200px;
+  overflow: auto;
+  padding: 10px;
+}
+
+#available_surveys {
+  float: left;
+}
+
+#my_surveys {
+  float: right;
+}
+
+.nav_links {
+  text-align: center;
+  padding: 20px;
+}
+
+.nav_links a {
+  margin: 15px;
+}
+
+
+
+
+
+
+
+
+
 

@@ -43,5 +43,8 @@
   <br>
 
 </div>
-  <div class="notification"><%= erb :notification_message %></div>
+  <% if session[:alert] %>
+    <div class="notification"><%= session[:alert] %>
+  <% end %>
+</div>
 

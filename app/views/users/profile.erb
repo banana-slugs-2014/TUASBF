@@ -2,30 +2,30 @@
   <h1>You are an Ultimate Amazing Super Best Friend!</h1>
 </div>
 
+<% my_surveys = Survey.where(user_id: @user.id) %>
+<% all_surveys = Survey.all %>
 
+  <div id="user_page">
+    <div id="available_surveys" class="survey_list">
+       <p>Take a Survey and Make Some Super Best Friends!</p>
+      <% all_surveys.each do |survey| %>
+        <li><a href="/surveys/<%= survey.id %>"><%= survey.title %></a></li>
+      <% end %>
+    </div>
 
-<div id="user_page">
-  <div id="available_surveys">
-     Take a Survey and Make Some Super Best Friends!<br>
-    <%# .each do |survey| %>
-      <li><a href="/surveys/<%#= survey.id %>"><%#= survery.title %></a></li>
-    <%# end %>
+    <div id="my_surveys" class="survey_list">
+      <p>My Ultimate Amazing Survey(s)</p>
+        <% my_surveys.each do |survey| %>
+         <li><a href="/surveys/<%= survey.id %>/info"><%= survey.title %></a></li>
+        <% end %>
+    </div>
+    <br style="clear:both;",>
   </div>
-  <div id="my_surveys">
-    <%# if A_USERS_SURVEY %>
-    My Ultimate Amazing Survey(s)<br>
-      <ul>
-     <%# @user.surveys.each do |survey| %>
-       <li><a href="/surveys/<%#= survey.id %>/info"><%#= survery.title %></a></li>
-     <%# end %>
-    </ul>
+  <div class="nav_links">
+    <a href="/users/<%= @user.id %>/edit">Edit User</a>
+    <a href="/surveys/new">Create Survey</a>
+    <a href="/">Home</a>
   </div>
-  <br style="clear:both;",>
-</div>
-  <a href="/users/<%= @user.id %>/edit">Edit User</a>
-  <a href="/surveys/new">Create Survey</a>
-  <a href="/">Home</a>
-
 <!-- edit user
 
 delete user -->
