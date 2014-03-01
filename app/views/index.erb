@@ -43,8 +43,8 @@
   <br>
 
 </div>
-  <% if session[:alert] %>
-    <div class="notification"><%= session[:alert] %>
+  <% if flash[:notice] %>
+    <div class="notification"><%= flash[:notice] %>
   <% end %>
 </div>
 
