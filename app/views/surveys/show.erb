@@ -1,0 +1,8 @@
+<% @survey.questions.each do |question| %>
+  <div class = 'survey-content'>
+    <h4><%= question.text %><br></h4>
+      <% question.answers.each do |answer| %>
+        <p><%= answer.text %></p>
+      <% end %>
+  </div>
+<% end %>
