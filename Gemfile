@@ -15,6 +15,7 @@ gem 'activesupport'
 gem 'activerecord'
 
 gem 'rake'
+gem 'rack-flash3'
 
 gem 'shotgun'
 
