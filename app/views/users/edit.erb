@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="edit_user">
+    <form action='/users/<%#= current_user.id %>' method="post">
+      <table>
+        <tr>
+          <td>new email: </td>
+          <td><input type="text" name="user[email]"></td>
+        </tr>
+        <tr>
+          <td>new password: </td>
+          <td><input type="password" name="user[password]"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="hidden" name="_method" value="patch">
+            <input type="submit" value="Edit User Info">
+          </td>
+    </form>
+  </div>
+
+  <div class="delete_user">
+    <form action='/users/<%#= current_user.id %>' method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="DELETE ACCOUNT" onclick="return confirm('confirm deletion of account?')">
+    </form>
+  </div>
+</div>
