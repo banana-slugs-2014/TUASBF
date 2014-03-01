@@ -1,10 +1,10 @@
 module AlertCreator
   def self.create(type, model_instance, params = {})
     case type
-    when :edit then flash[:notice] = EditAlert.new(model_instance, params)
-    when :create then flash[:notice] = CreateAlert.new(model_instance, params)
-    when :login then flash[:notice] = LoginAlert.new(model_instance, params)
-    else flash[:notice] = Alert.new(params)
+    when :edit then return EditAlert.new(model_instance, params)
+    when :create then return CreateAlert.new(model_instance, params)
+    when :login then return LoginAlert.new(model_instance, params)
+    else return Alert.new(params)
     end
   end
 
