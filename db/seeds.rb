@@ -7,6 +7,6 @@ require 'faker'
   Question.create(text: Faker::Lorem.words, survey_id: rand(9)+1)
   Response.create(user_id: rand(9)+1, answer_id: rand(9)+1)
   Completesurvey.create(user_id: rand(9)+1, survey_id: rand(9)+1)
-  Answer.create(text: Faker::Lorem.sentence, question_id: rand(9)+1)
+  Answer.create(content: Faker::Lorem.sentence, question_id: rand(9)+1)
 end
 

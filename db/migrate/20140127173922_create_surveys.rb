@@ -17,7 +17,7 @@ class CreateSurveys < ActiveRecord::Migration
     end
 
     create_table(:answers) do |t|
-      t.string :text
+      t.string :content
       t.references :question
     end
 
