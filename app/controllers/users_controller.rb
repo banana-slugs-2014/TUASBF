@@ -1,8 +1,3 @@
-get '/users/new' do
-  # Unused
-  erb :'users/new'
-end
-
 post '/users/new' do
   # TODO: Refactor for alerts
   @user = User.create(params[:user])
@@ -45,11 +40,6 @@ patch '/users/:id' do
     alert = "This entry is invalid for this user"
   end
   redirect "/users/#{params[:id]}/edit#{"?alert="+alert if alert}"
-end
-
-get '/users/:id/delete' do
-  @user = User.find(params[:id])
-  erb :'users/delete'
 end
 
 delete '/users/:id/delete' do
