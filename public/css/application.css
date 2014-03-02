@@ -148,6 +148,7 @@ text-shadow: 2px 2px #158cba  ;
 }
 */
 
+h2 {color: white; text-shadow: grey 0.1em 0.1em 0.2em}
 
 header.jumbotron {
   font-size: 70px;
@@ -170,7 +171,6 @@ h2 {color: white; text-shadow: grey 0.1em 0.1em 0.2em}
  color: red; text-shadow: black  0.1em 0.1em 0.2em;
 }
 
-
 .question {
   color:white;
   font-size: 25px;
@@ -189,6 +189,7 @@ h2 {color: white; text-shadow: grey 0.1em 0.1em 0.2em}
   border: none;
   margin: 2px 0px;
 }
+
 
 h1 {
   font-size: 40px;
