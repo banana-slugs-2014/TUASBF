@@ -18,4 +18,13 @@ helpers do
     end
     count
   end
+
+  def redirect_if_invalid model_instance
+    if model_instance.invalid?
+      alert = AlertCreator.create(:create, model_instance, params)
+      flash[:notice] = alert
+      redirect '/surveys/new'
+    end
+
+  end
 end
