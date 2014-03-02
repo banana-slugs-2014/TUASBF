@@ -3,7 +3,6 @@
   width: 700px;
   padding: 0px 20px 20px 20px;
   height: 500px;
-  border: 1px dotted black;
 }
 
 th {
@@ -94,6 +93,7 @@ h1{
   margin-left: auto;
 }
 
+
 /*===== User Profile =====*/
 
 #user_page {
@@ -129,10 +129,40 @@ h1{
 
 
 
+body {
+  background: url(http://starcrusade.fadingsuns.org/images/0/0b/Space-wallpaper.jpg
+)}
+
+.jumbotron {
+  background-color: #222;
+  border: none;
+
+}
+
+/*header{
+font-family: inherit;
+font-size: 58px;
+text-align: center;
+color: white
+text-shadow: 2px 2px #158cba  ;
+}
+*/
 
 
+header.jumbotron {
+  font-size: 70px;
+  color: #158cba;
+}
+form .login_signup {
+  background-color: black;
+}
 
+.headers {
+  color: white;
+}
 
-
-
+h2  {
+color: white;
+}
+>>>>>>> styles homepage
 
