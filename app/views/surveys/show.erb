@@ -10,7 +10,13 @@
 
   <li>
     <h3><%= answer.content %></h3>
-    <p><%= count_survey_responses(answer) if @survey.user_id == current_user.id %></p>
+    <p>
+    <% if @survey.user_id == current_user.id %>
+      <%= count_survey_responses(answer) %>
+    <% else %>
+      <% current_user.answers.find_by_question_id(question.id) %>
+    <% end %>
+    </p>
   </li>
 
   <% end %>
