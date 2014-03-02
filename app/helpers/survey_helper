@@ -1,9 +1,0 @@
-helpers do
-  user_answers = {}
-  def count_survey_answers(question)
-    question.answers.user_responses.answers.each do |answer|
-      user_answers[anwser.content] += 1
-    end
-    user_answers.sort_by{|k,v| v}.reverse
-  end
-end

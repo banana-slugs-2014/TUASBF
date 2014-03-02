@@ -1,16 +1,28 @@
+<div class = 'survey-content'>
+<ul>
 <% @survey.questions.each do |question| %>
-  <div class = 'survey-content'>
-    <h4><%= question.text %><br></h4>
-      <% question.answers.each do |answer| %>
-        <p><%= answer.text %></p>
-      <% end %>
-      <% if @survey.user_id == session[:user_id] %>
-        <%= count_survey_answers(qestion) %>
-      <% else %>
-        <%= erb :'/surveys/take' %>
-      <% end %>
 
-  </div>
+<li>
+  <h2><%= question.text %><br></h4>
+
+  <ul>
+  <% question.answers.each do |answer| %>
+
+  <li>
+    <h3><%= answer.content %></h3>
+    <p><%= count_survey_responses(answer) if @survey.user_id == current_user.id %></p>
+  </li>
+
+  <% end %>
+  </ul>
+
+
+  <% unless logged_in? %>
+    <%= erb :'/surveys/take' %>
+  <% end %>
+
+</li>
+
 <% end %>
-
-
+<ul>
+</div>

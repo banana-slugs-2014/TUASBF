@@ -4,7 +4,7 @@
 ### Who are we?
 We are The Ultimate Amazing Super Best Friend!
 
-In details : 
+In details :
 
 - [Armando](https://github.com/trekkie4life)
 - [Chermaine](https://github.com/c14jcdj)
@@ -18,4 +18,5 @@ of the Banana Slugs, San Francisco's [Dev Bootcamp](http://devbootcamp.com)'s co
 It is a group project where we build a customized version of [SurveyMonkey](surveymonkey.com). Once we have a link, you'll be the first one noticed (Yes, you, the person reading that, not even the people around you, even if they think we're talking about them...)
 
 ### Contributing
+
 You are not an Ultimate Amazing Super Best Friend, sorry ;)
