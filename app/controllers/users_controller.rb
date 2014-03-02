@@ -2,11 +2,10 @@ post '/users/new' do
   @user = User.create(params[:user])
   @alert = AlertCreator::create(:create, @user, params)
   if @alert
-    flash[:notice] = @alert
-    redirect "/users/new"
-  else
-    redirect "/users/#{@user.id}"
+    flash[:notice] = @alert.message
+    redirect "/"
   end
+  redirect "/users/#{@user.id}"
 end
 
 post '/users/login' do
@@ -15,7 +14,7 @@ post '/users/login' do
   @user = User.find_by_email(user_params["email"])
   @alert = AlertCreator::create(:login, @user, params)
   if @alert
-    flash[:notice] = @alert
+    flash[:notice] = @alert.message
   else
     session[:user_id] = @user.id
   end

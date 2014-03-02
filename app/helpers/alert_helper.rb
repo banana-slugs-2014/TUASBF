@@ -4,7 +4,7 @@ module AlertCreator
     when :edit then return EditAlert.new(model_instance, params)
     when :create then return CreateAlert.new(model_instance, params)
     when :login then return LoginAlert.new(model_instance, params)
-    else return Alert.new(params)
+    else Alert.new(params)
     end
   end
 
@@ -26,7 +26,7 @@ module AlertCreator
 
   class CreateAlert < Alert
     def build_message
-      return false if model_instance.valid?
+      return false if @model_instance.valid?
       @message = ["Could not create this #{@model_instance.class.name}"]
       super
     end
