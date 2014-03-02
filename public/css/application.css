@@ -56,7 +56,7 @@ h1{
   margin-right: auto;
   margin-left: auto;
   width: 600px;
-  border: 1px solid black;
+
 }
 
 #available_surveys {
@@ -98,13 +98,12 @@ h1{
 
 #user_page {
   list-style: none;
-  width: 850px;
+  width: 1250px;
 }
 
 .survey_list {
   margin: 10px;
   width: 45%;
-  border: 1px solid silver;
   height: 300px;
   overflow: auto;
   padding: 10px;
@@ -139,14 +138,6 @@ body {
 
 }
 
-/*header{
-font-family: inherit;
-font-size: 58px;
-text-align: center;
-color: white
-text-shadow: 2px 2px #158cba  ;
-}
-*/
 
 h2 {color: white; text-shadow: grey 0.1em 0.1em 0.2em}
 
@@ -166,7 +157,7 @@ h2 {color: white; text-shadow: grey 0.1em 0.1em 0.2em}
 
 .jumbotron {opacity: 0.7}
 
-.notification_message {
+.notification h3 {
   font-size: 40px;
  color: red; text-shadow: black  0.1em 0.1em 0.2em;
 }
@@ -195,3 +186,25 @@ h1 {
   font-size: 40px;
   color: white; text-shadow: black  0.1em 0.1em 0.2em;
 }
+
+.survey_list p {
+  font-size: 25px;
+  color: white; text-shadow: black  0.1em 0.1em 0.2em;
+}
+
+
+.survey_list a {
+  font-size: 25px;
+  color: #158cba; text-shadow: black  0.1em 0.1em 0.2em;
+}
+
+.nav_links a {
+  font-size: 25px;
+   color: white; text-shadow: black  0.1em 0.1em 0.2em;
+}
+
+.survey_list a:hover {
+  color: white;
+  text-decoration: none;
+}
+
