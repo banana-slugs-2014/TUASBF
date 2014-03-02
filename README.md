@@ -20,4 +20,3 @@ It is a group project where we build a customized version of [SurveyMonkey](surv
 ### Contributing
 
 You are not an Ultimate Amazing Super Best Friend, sorry ;)
-
