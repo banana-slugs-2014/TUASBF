@@ -1,56 +1,21 @@
-### Purpose
+# The Ultimate Amazing Super Best Friend's Survey App
+####(Awesome without having awesome in the name!)
 
-The Sinatra Skeleton:
+### Who are we?
+We are The Ultimate Amazing Super Best Friend!
 
-1. Provides a foundation for building challenges.
-2. Demonstrates a reasonable set of practices around building Sinatra applications.
-3. Eases the transition to Rails for Dev Bootcamp students
-4. Demonstrates that it is not **required** that all models in `app/models` be
-   `ActiveRecord` backed!
-5. Gives bare-bones RSpec skeleton wherewith to start building the practice of testing
+In details : 
 
-### Quickstart
+- [Armando](https://github.com/trekkie4life)
+- [Chermaine](https://github.com/c14jcdj)
+- [Chris](https://github.com/chriswoodrich)
+- [Henry](https://github.com/henryh28)
+- [Quentin](https://github.com/qt-dev)
 
-1.  `bundle install`
-2.  `shotgun config.ru`
+of the Banana Slugs, San Francisco's [Dev Bootcamp](http://devbootcamp.com)'s cohort on phase 2 right now (middle of the program)
 
-### Heroku Warning
-
-If you plan on pushing the skeleton to Heroku, the contents of this skeleton must
-be a the "root level" of your local git repository.  For example, imagine I:
-
-`git checkout https://github.com/my-cohort-year/awesome-challenge`
-
-and then `cd awesome-challenge`.
-
-I read the `README.md` and then decide to check out this skeleton:
-
-`git checkout https://github.com/my-cohort-year/sinatra_skeleton_mvc`
-
-While I can then `cd sinatra_skeleton_mvc` and then edit migrations, start
-`shotgun`, etc., **WHEN I DEPLOY TO HEROKU THE APP WILL NOT WORK**.
-
-Heroku
-[**demands**](https://devcenter.heroku.com/articles/git#tracking-your-app-in-git)
-that your application be in the **root** i.e. on the same level as the
-`README.md`.
-
-From the root directory you can run `git mv sinatra_skeleton_mvc/* .`
-and commit that change.  There are a variety of `shell` and `git` ways to
-get the skeleton into the "git root" (the place where a `.git` directory is),
-but just make sure your skeleton is "rooted" there if you want your deploys to
-Heroku to work.
-
-If you clone the skeleton into an _existing git repo_, make sure to remove the
-version control from the skeleton by running `rm -rf sinatra_skeleton_mvc/.git/`
-, but remember, `rm -rf` is destructive, so use it with caution.
+### What is it?
+It is a group project where we build a customized version of [SurveyMonkey](surveymonkey.com). Once we have a link, you'll be the first one noticed (Yes, you, the person reading that, not even the people around you, even if they think we're talking about them...)
 
 ### Contributing
-
-We would love for you to help make the skeleton more awesome, There are three ways to contribute:
-
-1. Ask for a bug fix or enhancement!
-2. Submit a pull request for a bug fix or enhancement!
-3. Code review an open pull request!
-
-Be prepared to give and receive specific, actionable, and kind feedback!
+You are not an Ultimate Amazing Super Best Friend, sorry ;)
