@@ -1,31 +1,32 @@
 <h1>Create Survey</h1>
 
 <div>
-  <form class="survey_create">
-    Survey Name: <input type="text" name="survey[survey]"><br>
-    <ol>
-      <li> Question 1: <input type="text" name="survey[question1]"></li>
+  <form class="survey_create" class='form-signin' role='form'>
+    <h2 class='form-signin-heading'>
+    Survey Name: <input type="text" class="form-control" name="survey[survey]"><br>
+    <ol></h2>
+      <li class='question'> Question 1: <input class="sub_field" autofocus="" type="text" name="survey[question1]"></li>
         <ul>
-          <li>Option A: <input type="text" name="survey[question1_answer1]"></li>
-          <li>Option B: <input type="text" name="survey[question1_answer2]"></li>
-          <li>Option C: <input type="text" name="survey[question1_answer3]"></li>
+          <li class='option'>Option A: <input class="sub_field" autofocus="" type="text" name="survey[question1_answer1]"></li>
+          <li class='option'>Option B: <input class="sub_field" autofocus="" type="text" name="survey[question1_answer2]"></li>
+          <li class='option'>Option C: <input class="sub_field" autofocus="" type="text" name="survey[question1_answer3]"></li>
         </ul><br>
-      <li> Question 2: <input type="text" name="survey[question2]"></li>
+      <li class='question'> Question 2: <input class="sub_field" autofocus="" type="text" name="survey[question2]"></li>
         <ul>
-          <li>Option A: <input type="text" name="survey[question2_answer1]"></li>
-          <li>Option B: <input type="text" name="survey[question2_answer2]"></li>
-          <li>Option C: <input type="text" name="survey[question2_answer3]"></li>
+          <li class='option'>Option A: <input class="sub_field" autofocus="" type="text" name="survey[question2_answer1]"></li>
+          <li class='option'>Option B: <input class="sub_field" autofocus="" type="text" name="survey[question2_answer2]"></li>
+          <li class='option'>Option C: <input class="sub_field" autofocus="" type="text" name="survey[question2_answer3]"></li>
         </ul><br>
-      <li> Question 3: <input type="text" name="survey[question3]"></li>
+      <li class='question'> Question 3: <input class="sub_field" autofocus="" type="text" name="survey[question3]"></li>
         <ul>
-          <li>Option A: <input type="text" name="survey[question3_answer1]"></li>
-          <li>Option B: <input type="text" name="survey[question3_answer2]"></li>
-          <li>Option C: <input type="text" name="survey[question3_answer3]"></li>
+          <li class='option'>Option A: <input class="sub_field" autofocus="" type="text" name="survey[question3_answer1]"></li>
+          <li class='option'>Option B: <input class="sub_field" autofocus="" type="text" name="survey[question3_answer2]"></li>
+          <li class='option'>Option C: <input class="sub_field" autofocus="" type="text" name="survey[question3_answer3]"></li>
         </ul>
     </ol>
     <br>
-    <button type="submit" formmethod="post" formaction="/surveys/new">Create Survey</button>
-    <button type="submit" formmethod="get" formaction="/">Home</button>
+    <button type="submit" class="btn btn-lg btn-primary btn-block"  formmethod="post" formaction="/surveys/new">Create Survey</button>
+    <button type="submit" class="btn btn-lg btn-primary btn-block"  formmethod="get" formaction="/">Home</button>
 
   </form>
 </div>

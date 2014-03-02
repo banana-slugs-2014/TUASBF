@@ -82,8 +82,8 @@ h1{
 .survey_create {
   margin-left: auto;
   margin-right: auto;
-  width: 700px;
-  border: 1px solid black;
+  width: 750px;
+
   text-align: center;
   padding: 25px;
 }
@@ -171,4 +171,26 @@ h2 {color: white; text-shadow: grey 0.1em 0.1em 0.2em}
 }
 
 
+.question {
+  color:white;
+  font-size: 25px;
+  list-style: none;
+}
 
+.option {
+  font-size: 20px;
+  color: white;
+  list-style: none;
+}
+
+.sub_field {
+  width: 500px;
+  height: 50px;
+  border: none;
+  margin: 2px 0px;
+}
+
+h1 {
+  font-size: 40px;
+  color: white; text-shadow: black  0.1em 0.1em 0.2em;
+}
