@@ -1,12 +1,9 @@
 post '/users/new' do
-  # TODO: Refactor for alerts
   @user = User.create(params[:user])
-  if @user.nil?
-    alert = "You actually need to fill the fields to create a user"
-    redirect "/users/new?alert=#{alert}"
-  elsif @user.invalid?
-    alert = "Not working"
-    redirect "/users/new?alert=#{alert}"
+  @alert = AlertCreator::create(:create, @user, params)
+  if @alert
+    flash[:notice] = @alert
+    redirect "/users/new"
   else
     redirect "/users/#{@user.id}"
   end
@@ -16,31 +13,29 @@ post '/users/login' do
   session.clear
   user_params = params[:user]
   @user = User.find_by_email(user_params["email"])
-  if @user.nil?
-    session[:alert] = "There is no such user"
-    redirect '/'
-  elsif @user.password == user_params["password"]
-    session[:user_id] = @user.id
-    erb :'users/profile'
+  @alert = AlertCreator::create(:login, @user, params)
+  if @alert
+    flash[:notice] = @alert
   else
-    session[:alert] = "The password is not right"
-    redirect "/"
+    session[:user_id] = @user.id
   end
+
+  redirect "/"
 end
 
 get '/users/:id/edit' do
-  # Unused for the moment
   @user = User.find(params[:id])
   erb :'users/edit'
 end
 
 patch '/users/:id' do
-  # TODO: Refactor for alerts
   @user = User.update(params[:id], params[:user])
-  if @user.invalid?
-    alert = "This entry is invalid for this user"
+  @alert = AlertCreator::create(:edit, @user, params)
+  if @alert
+    flash[:notice] = @alert
+    redirect "/users/#{params[:id]}/edit"
   end
-  redirect "/users/#{params[:id]}/edit#{"?alert="+alert if alert}"
+  redirect "/users/#{params[:id]}"
 end
 
 delete '/users/:id/delete' do
