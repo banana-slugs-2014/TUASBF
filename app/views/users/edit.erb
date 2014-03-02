@@ -1,27 +1,31 @@
+<!-- <div class="signup">
+  <form class='form-signin' role='form' action='/users/login' method='post'>
+    <h2 class='form-signin-heading'>Want to be a Super BF?</h2>
+    <input type="email" name='user[email]' class="form-control" placeholder="Email address" required="" autofocus="">
+    <input type="password" class="form-control" name='user[password]' placeholder="Password" required="">
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Signup</button>
+  </form>
+  <br>
+
+</div>
+ -->
 <div class="container">
+
+
   <div class="edit_user">
-    <form action='/users/<%#= current_user.id %>' method="post">
-      <table>
-        <tr>
-          <td>new email: </td>
-          <td><input type="text" name="user[email]"></td>
-        </tr>
-        <tr>
-          <td>new password: </td>
-          <td><input type="password" name="user[password]"></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td><input type="hidden" name="_method" value="patch">
-            <input type="submit" value="Edit User Info">
-          </td>
+    <form  class='form-signin' role='form' action='/users/<%#= current_user.id %>' method="post">
+      <li class='edit'>New Email:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input class= 'sub_field'  type="text" name="user[email]" class="form-control" placeholder="Email address" required="" autofocus=""></li>
+      <li class='edit' id='new_p'>New Password: <input class= 'sub_field'  type="password" name="user[password]"class="form-control" name='user[password]' placeholder="Password" required=""></li>
+        <input type="hidden" name="_method" value="patch">
+         <input class="btn btn-lg btn-primary btn-block"  id='edit_button' type="submit" value="Edit User Info">
     </form>
   </div>
 
-  <div class="delete_user">
-    <form action='/users/<%#= current_user.id %>' method="post">
+ <div class="delete_user">
+    <form class='form-signin' role='form' action='/users/<%#= current_user.id %>' method="post">
       <input type="hidden" name="_method" value="delete">
-      <input type="submit" value="DELETE ACCOUNT" onclick="return confirm('confirm deletion of account?')">
+      <input class="btn btn-lg btn-primary btn-block" type="submit" value="DELETE ACCOUNT" class='delete_acc' onclick="return confirm('confirm deletion of account?')">
     </form>
   </div>
+
 </div>

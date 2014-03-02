@@ -3,7 +3,6 @@
   width: 700px;
   padding: 0px 20px 20px 20px;
   height: 500px;
-  border: 1px dotted black;
 }
 
 th {
@@ -57,7 +56,7 @@ h1{
   margin-right: auto;
   margin-left: auto;
   width: 600px;
-  border: 1px solid black;
+
 }
 
 #available_surveys {
@@ -83,8 +82,8 @@ h1{
 .survey_create {
   margin-left: auto;
   margin-right: auto;
-  width: 700px;
-  border: 1px solid black;
+  width: 750px;
+
   text-align: center;
   padding: 25px;
 }
@@ -94,17 +93,17 @@ h1{
   margin-left: auto;
 }
 
+
 /*===== User Profile =====*/
 
 #user_page {
   list-style: none;
-  width: 850px;
+  width: 1250px;
 }
 
 .survey_list {
   margin: 10px;
   width: 45%;
-  border: 1px solid silver;
   height: 300px;
   overflow: auto;
   padding: 10px;
@@ -129,10 +128,103 @@ h1{
 
 
 
+body {
+  background: url(http://starcrusade.fadingsuns.org/images/0/0b/Space-wallpaper.jpg
+)}
+
+.jumbotron {
+  background-color: #222;
+  border: none;
+
+}
+
+
+h2 {color: white; text-shadow: grey 0.1em 0.1em 0.2em}
+
+header.jumbotron {
+  font-size: 70px;
+  color: #158cba;
+}
+form .login_signup {
+  background-color: black;
+}
 
 
 
+h2 {color: white; text-shadow: grey 0.1em 0.1em 0.2em}
+
+.jumbotron h1 {color: white; text-shadow: white  0.1em 0.1em 0.2em}
+
+.jumbotron {opacity: 0.7}
+
+.notification h3 {
+  font-size: 40px;
+ color: red; text-shadow: black  0.1em 0.1em 0.2em;
+}
+
+.question {
+  color:white;
+  font-size: 25px;
+  list-style: none;
+}
+
+.option {
+  font-size: 20px;
+  color: white;
+  list-style: none;
+}
+
+.sub_field {
+  width: 500px;
+  height: 50px;
+  border: none;
+  margin: 2px 0px;
+}
 
 
+h1 {
+  font-size: 40px;
+  color: white; text-shadow: black  0.1em 0.1em 0.2em;
+}
 
+.survey_list p {
+  font-size: 25px;
+  color: white; text-shadow: black  0.1em 0.1em 0.2em;
+}
+
+
+.survey_list a {
+  font-size: 25px;
+  color: #158cba; text-shadow: black  0.1em 0.1em 0.2em;
+}
+
+.nav_links a {
+  font-size: 25px;
+   color: white; text-shadow: black  0.1em 0.1em 0.2em;
+}
+
+.survey_list a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.edit_user {
+  width: 660px;
+  margin-left: 0px ;
+  margin-top: 100px;
+  margin-bottom: 8px;
+}
+
+.edit {
+  color:white;
+  font-size: 20px;
+  list-style: none;
+  margin: 8px;
+
+  border: none;
+}
+
+#new_p {
+  margin-bottom: 15px;
+}
 
