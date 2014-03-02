@@ -12,6 +12,7 @@ module AlertCreator
     attr_reader :message, :result
     def initialize model_instance, params
       @model_instance = model_instance
+      return false if @model_instance.invalid?
       @message = ["ERRORS"]
       build_message
     end
@@ -26,7 +27,6 @@ module AlertCreator
 
   class CreateAlert < Alert
     def build_message
-      return false if @model_instance.valid?
       @message = ["Could not create this #{@model_instance.class.name}"]
       super
     end
@@ -34,7 +34,6 @@ module AlertCreator
 
   class EditAlert < Alert
     def build_message
-      return false if model_instance.valid?
       @message = ["Could not edit this #{@model_instance.class.name}"]
       super
     end
