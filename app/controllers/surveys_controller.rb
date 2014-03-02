@@ -23,3 +23,8 @@ post '/surveys/new' do
 
   redirect "/user/#{current_user.id}"
 end
+
+get '/surveys/:id' do
+  @survey = Survey.find(params[:id])
+  erb :'surveys/show'
+end
