@@ -9,12 +9,17 @@ module AlertCreator
   end
 
   class Alert
-    attr_reader :message, :result
+    attr_reader :message, :result, :exists
     def initialize model_instance, params
-      @model_instance = model_instance
-      return false if @model_instance.invalid?
-      @message = ["ERRORS"]
-      build_message
+      @exists = true
+      if model_instance.nil?
+        @message = ["The #{model_instance.class.name} should not be null"]
+      else
+        @model_instance = model_instance
+        @exists = false if @model_instance.valid?
+        @message = ["ERRORS"]
+        build_message
+      end
     end
 
     def build_message
@@ -41,13 +46,14 @@ module AlertCreator
 
   class LoginAlert < Alert
     def initialize user, params
-      if user.password == params[:password]
-        return false
-      elsif user.nil?
-        ["This user does not exist"]
+      @exists = true
+      if user.nil?
+        @message = ["There is no such user"]
+      elsif user.password == params[:password]
+        @exists = false
+      else
+        @message = ["The password you provided for '#{@user}' is not valid"]
       end
-
-      ["The password you provided for '#{user.name}' is not valid"]
     end
   end
 end
