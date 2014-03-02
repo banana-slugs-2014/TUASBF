@@ -1,27 +1,32 @@
 <h1>Create Survey</h1>
 
-<form class="survey_create">
+<div>
+  <form class="survey_create">
+    Survey Name: <input type="text" name="survey[survey]"><br>
+    <ol>
+      <li> Question 1: <input type="text" name="survey[question1]"></li>
+        <ul>
+          <li>Option A: <input type="text" name="survey[question1_answer1]"></li>
+          <li>Option B: <input type="text" name="survey[question1_answer2]"></li>
+          <li>Option C: <input type="text" name="survey[question1_answer3]"></li>
+        </ul><br>
+      <li> Question 2: <input type="text" name="survey[question2]"></li>
+        <ul>
+          <li>Option A: <input type="text" name="survey[question2_answer1]"></li>
+          <li>Option B: <input type="text" name="survey[question2_answer2]"></li>
+          <li>Option C: <input type="text" name="survey[question2_answer3]"></li>
+        </ul><br>
+      <li> Question 3: <input type="text" name="survey[question3]"></li>
+        <ul>
+          <li>Option A: <input type="text" name="survey[question3_answer1]"></li>
+          <li>Option B: <input type="text" name="survey[question3_answer2]"></li>
+          <li>Option C: <input type="text" name="survey[question3_answer3]"></li>
+        </ul>
+    </ol>
+    <br>
+    <button type="submit" formmethod="post" formaction="/surveys/new">Create Survey</button>
+    <button type="submit" formmethod="get" formaction="/">Home</button>
 
-  <table>
-    <tr>
-      <td>Question</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>option 1</td>
-      <td><input type="text" name="survey[question1_answer1]"></td>
-    </tr>
-    <tr>
-      <td>option 2</td>
-      <td><input type="text" name="option2"></td>
-    </tr>
-    <tr>
-      <td>option 3</td>
-      <td><input type="text" name="option3"></td>
-    </tr>
-  </table>
-  <br>
-  <button type="submit" formmethod="post" formaction="/survey">Create Survey</button>
-  <button type="submit" formmethod="get" formaction="/">Home</button>
+  </form>
+</div>
 
-</form>

@@ -13,18 +13,19 @@ post '/users/new' do
 end
 
 post '/users/login' do
+  session.clear
   user_params = params[:user]
   @user = User.find_by_email(user_params["email"])
-
   if @user.nil?
-    alert = "There is no such user"
+    session[:alert] = "There is no such user"
+    redirect '/'
   elsif @user.password == user_params["password"]
     session[:user_id] = @user.id
+    erb :'users/profile'
   else
-    alert = "The password is not right"
+    session[:alert] = "The password is not right"
+    redirect "/"
   end
-
-  redirect "/#{'?alert=' + alert if alert }"
 end
 
 get '/users/:id/edit' do
