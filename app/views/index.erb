@@ -1,56 +1,50 @@
 <div class="container">
+
   <div class="logo">
     Logo here
   </div>
 
-<div class="login">
-  <form action='/users/login' method='post'>
-    <p class="login_signup">Already a member?</p>
-    <table>
-      <tr>
-        <td>email: </td>
-        <td><input type='text' name='user[email]'></td>
-      </tr>
-      <tr>
-        <td>password: </td>
-        <td><input type='password' name='user[password]'>
-      </tr>
-      <tr>
-        <td colspan='2'><button id='btn_login' type='submit'>Login</button>
-      </tr>
-    </table>
-  </form>
-  <br>
-</div>
 
-<div class="signup">
-  <form action='/users/new' method='post'>
-    <p class="login_signup">Want to be super BF</p>
-    <table>
-      <tr>
-        <td>email: </td>
-        <td><input type='text' name='user[email]'></td>
-      </tr>
-      <tr>
-        <td>password: </td>
-        <td><input type='password' name='user[password]'>
-      </tr>
-      <tr>
-        <td colspan='2'><button id='btn_signup' type='submit'>Signup</button>
-      </tr>
-    </table>
-  </form>
-  <br>
-
-</div>
-  <% if flash[:notice] %>
-  <div class="notification">
-    <h3><%= flash[:notice].shift %></h3>
-    <ul>
-    <% flash[:notice].each do |error| %>
-      <li><%= error %><li>
-    <% end %>
-    </ul>
+  <div class="login">
+    <form action='/users/login' method='post'>
+      <p class="login_signup">Already a member?</p>
+      <table>
+        <tr>
+          <td>email: </td>
+          <td><input type='text' name='user[email]'></td>
+        </tr>
+        <tr>
+          <td>password: </td>
+          <td><input type='password' name='user[password]'>
+        </tr>
+        <tr>
+          <td colspan='2'><button id='btn_login' type='submit'>Login</button>
+        </tr>
+      </table>
+    </form>
+    <br>
   </div>
-  <% end %>
+
+  <div class="signup">
+    <form action='/users/new' method='post'>
+      <p class="login_signup">Want to be super BF</p>
+      <table>
+        <tr>
+          <td>email: </td>
+          <td><input type='text' name='user[email]'></td>
+        </tr>
+        <tr>
+          <td>password: </td>
+          <td><input type='password' name='user[password]'>
+        </tr>
+        <tr>
+          <td colspan='2'><button id='btn_signup' type='submit'>Signup</button>
+        </tr>
+      </table>
+    </form>
+    <br>
+  </div>
+
+</div>
+
 
