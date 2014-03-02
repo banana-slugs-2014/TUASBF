@@ -16,7 +16,7 @@
     <div id="my_surveys" class="survey_list">
       <p>My Ultimate Amazing Survey(s)</p>
         <% my_surveys.each do |survey| %>
-         <li><a href="/surveys/<%= survey.id %>/info"><%= survey.title %></a></li>
+         <li><a href="/surveys/<%= survey.id %>"><%= survey.title %></a></li>
         <% end %>
     </div>
     <br style="clear:both;",>

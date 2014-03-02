@@ -28,9 +28,13 @@ end
 
 get '/surveys/:id' do
   @survey = Survey.find(params[:id])
-  if current_user.completesurveys.find(params[:id]) || @survey.user_id = current_user.id
+  if @survey.user_id == current_user.id #|| current_user.completesurveys.find(params[:id])
     erb :'surveys/show'
   else
     erb :'surveys/take'
   end
+end
+
+post '/surveys/:id' do
+
 end
