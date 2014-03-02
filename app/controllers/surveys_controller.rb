@@ -21,10 +21,16 @@ post '/surveys/new' do
   @question3.answers.create(content: survey_params[:question3_answer2])
   @question3.answers.create(content: survey_params[:question3_answer3])
 
+  current_user.completesurveys.create(user_id: @user.id, survey_id: @survey.id)
+
   redirect "/user/#{current_user.id}"
 end
 
 get '/surveys/:id' do
   @survey = Survey.find(params[:id])
-  erb :'surveys/show'
+  if current_user.completesurveys.find(params[:id]) || @survey.user_id = current_user.id
+    erb :'surveys/show'
+  else
+    erb :'surveys/take'
+  end
 end

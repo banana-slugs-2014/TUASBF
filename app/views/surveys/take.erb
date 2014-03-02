@@ -1,20 +1,21 @@
-<h1><%= SURVEY.ID.TITLE %></h1>
+<div class = 'survey-content'>
+<h1><%= @survey.title %></h1>
 
-<form class="survey_content">
+<form action='/test' method='post'>
+<% @survey.questions.each do |question| %>
 
-  <ul>
-  <% SURVEY.QUESTION.EACH do |question|%>
-    <h3><%= question.text %></h3>
+  <h2><%= question.text %><br></h4>
 
-    <% question.each do |option| %>
-      <input type="radio" name="test" value="option<%= question.option.id%>"><%= QUESTION.OPTION %><br>
-    <% end %>
-
+  <select name='response[<%= question.text %>]'>
+  <% question.answers.each do |answer| %>
+    <option value='<%= answer.content %>'><%= answer.content %></option>
   <% end %>
-  </ul>
+  </select>
 
+<% end %>
 
+<br /><br />
+<button type="submit" >Submit Survey</button>
 
-  <button type="submit" formmethod="post" formaction="surveys/submit">Submit Survey</button>
-  <button type="submit" formmethod="get" formaction="/">Home</button>
 </form>
+</div>
