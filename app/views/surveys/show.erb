@@ -6,7 +6,10 @@
       <% end %>
       <% if @survey.user_id == session[:user_id] %>
         <%= count_survey_answers(qestion) %>
+      <% else %>
+        <%= erb :'/surveys/take' %>
       <% end %>
+
   </div>
 <% end %>
 
