@@ -228,3 +228,11 @@ h1 {
   margin-bottom: 15px;
 }
 
+#submit_survey {
+  width: 400px;
+}
+
+.survey-content form{
+  margin-top: 50px;
+  margin-left: 450px;
+}
