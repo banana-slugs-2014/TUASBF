@@ -237,6 +237,11 @@ h1 {
   margin-left: 450px;
 }
 
+.logo img {
+  width: 700px;
+  height: 400px;
+  margin-left: -55px;
+}
 input{
   color:black;
 }
