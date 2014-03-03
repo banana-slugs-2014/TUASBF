@@ -29,6 +29,7 @@ get '/users/logout' do
 end
 
 get '/users/:id/edit' do
+  redirect '/' unless logged_in? || params[:id].to_i == session[:user_id]
   @user = User.find(params[:id])
   erb :'users/edit'
 end
