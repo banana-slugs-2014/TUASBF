@@ -52,6 +52,10 @@ describe "UserController" do
     expect(User.find(@user.id).password).to include 'password'
   end
 
+  it "should delete an user is calling delete /users/:id" do
+    expect { delete "/users/#{@user.id}", {}, user_session }.to change(User, :count).by(-1)
+    expect(last_response.status).to be 302
+  end
 
 
   after(:all) do

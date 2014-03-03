@@ -46,10 +46,11 @@ patch '/users/:id' do
   end
 end
 
-delete '/users/:id/delete' do
-  User.find(params[:id].destroy)
-  if session[:id] == params[:id]
+delete '/users/:id' do
+  @user = User.find(params[:id])
+  if session[:user_id] == params[:id].to_i
     session.clear
+    @user.destroy
   end
   redirect "/"
 end
