@@ -24,7 +24,7 @@ post '/surveys/new' do
   redirect_if_invalid @question3.answers.create(content: survey_params[:question3_answer2]), '/surveys/new'
   redirect_if_invalid @question3.answers.create(content: survey_params[:question3_answer3]), '/surveys/new'
 
-  redirect_if_invalid current_user.completesurveys.create(user_id: current_user.id, survey_id: @survey.id)
+  redirect_if_invalid current_user.completesurveys.create(user_id: current_user.id, survey_id: @survey.id), '/surveys/new'
 
   redirect "/users/#{current_user.id}"
 end
