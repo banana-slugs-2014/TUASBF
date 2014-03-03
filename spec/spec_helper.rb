@@ -11,6 +11,7 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'shoulda-matchers'
 require 'rack/test'
 require 'factory_girl'
+require 'faker'
 
 FactoryGirl.definition_file_paths = %w{./factories ./test/factories ./spec/factories}
 FactoryGirl.find_definitions

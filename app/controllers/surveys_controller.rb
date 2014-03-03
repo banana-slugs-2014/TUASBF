@@ -1,4 +1,5 @@
 get '/surveys/new' do
+  redirect '/' unless logged_in?
   erb :'surveys/new'
 end
 
@@ -28,7 +29,7 @@ end
 
 get '/surveys/:id' do
   @survey = Survey.find(params[:id])
-  if @survey.user_id == current_user.id #|| current_user.completesurveys.find(params[:id])
+  if @survey.user_id == current_user.id || !current_user.completesurveys.find(params[:id]).nil?
     erb :'surveys/show'
   else
     erb :'surveys/take'

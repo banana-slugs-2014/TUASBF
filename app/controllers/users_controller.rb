@@ -18,7 +18,6 @@ post '/users/login' do
     flash[:notice] = @alert.message
   else
     session[:user_id] = @user.id
-    p "#{session[:user_id]} ----"
   end
 
   redirect "/"
@@ -30,24 +29,29 @@ get '/users/logout' do
 end
 
 get '/users/:id/edit' do
+  redirect '/' unless logged_in? || params[:id].to_i == session[:user_id]
   @user = User.find(params[:id])
   erb :'users/edit'
 end
 
 patch '/users/:id' do
+  redirect "/users/#{params[:id]}", 401 unless logged_in? && current_user.id == params[:id].to_i
   @user = User.update(params[:id], params[:user])
   @alert = AlertCreator::create(:edit, @user, params)
   if @alert.exists
     flash[:notice] = @alert
     redirect "/users/#{params[:id]}/edit"
+  else
+    @user.save
+    redirect "/users/#{params[:id]}"
   end
-  redirect "/users/#{params[:id]}"
 end
 
-delete '/users/:id/delete' do
-  User.find(params[:id].destroy)
-  if session[:id] == params[:id]
+delete '/users/:id' do
+  @user = User.find(params[:id])
+  if session[:user_id] == params[:id].to_i
     session.clear
+    @user.destroy
   end
   redirect "/"
 end
