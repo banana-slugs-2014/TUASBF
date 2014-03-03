@@ -22,7 +22,7 @@ describe "UserController" do
   end
 
   before(:all) do
-    10.times { User.create(email: Faker::Internet.email, password: Faker::Lorem.word) }
+    10.times { User.create(email: 'quentin@quentin.fr', password: Faker::Lorem.word) }
     @user = User.create(email: Faker::Internet.email, password: Faker::Lorem.word)
   end
 
