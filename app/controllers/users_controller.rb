@@ -5,7 +5,7 @@ post '/users/new' do
     flash[:notice] = @alert.message
     redirect "/"
   end
-  redirect "/users/#{@user.id}"
+  redirect "/"
 end
 
 post '/users/login' do
@@ -57,6 +57,7 @@ delete '/users/:id' do
 end
 
 get '/users/:id' do
+  redirect '/' unless logged_in?
   @user = User.find(params[:id])
   erb :'users/profile'
 end
